@@ -20,7 +20,6 @@ public class CollectionsHelper {
         employeeList = new ArrayList<>();
 
         var dataList = fileHelper.getFileContent("employees.txt");
-        System.out.println(dataList);
         employeeList.addAll(tokenizeHelper.stringListToEmployeeList(dataList));
     }
 
