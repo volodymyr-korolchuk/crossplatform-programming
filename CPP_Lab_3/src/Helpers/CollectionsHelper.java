@@ -15,8 +15,52 @@ public class CollectionsHelper {
     private PopulationHelper populationHelper = new PopulationHelper();
 
     public CollectionsHelper() {
+        FileHelper fileHelper = new FileHelper();
+        TokenizeHelper tokenizeHelper = new TokenizeHelper();
         employeeList = new ArrayList<>();
-        populationHelper.populate(employeeList, 10);
+
+        var dataList = fileHelper.getFileContent("employees.txt");
+        System.out.println(dataList);
+        employeeList.addAll(tokenizeHelper.stringListToEmployeeList(dataList));
+    }
+
+    public void start() {
+        int choice;
+        boolean exit = false;
+        Scanner scanner = new Scanner(System.in);
+
+        while(!exit) {
+            System.out.println("\nPerform: \n");
+            System.out.printf("1-%s %n2-%s %n3-%s %n4-%s %n%n", "Task #1", "Task #2", "Task #3", "Exit");
+            System.out.print("Choice: ");
+
+            String choiceString = scanner.nextLine().trim();
+            if (choiceString.isEmpty()) continue;
+            if (choiceString.equals("exit")) break;
+
+            try {
+                choice = Integer.parseInt(choiceString);
+                switch (choice) {
+                    case 1:
+                        task1();
+                        break;
+                    case 2:
+                        task2();
+                        break;
+                    case 3:
+                        task3();
+                        break;
+                    case 4:
+                        exit = true;
+                        break;
+                    default:
+                        break;
+                }
+            } catch (Exception exception) {
+                System.out.println("Exception occurred: " + exception.getMessage());
+                return;
+            }
+        }
     }
 
     public void task1() {
@@ -124,27 +168,6 @@ public class CollectionsHelper {
         task3Addition(employees_1, employees_2);
     }
 
-    private List<List<Employee>> handleFileOperations() {
-        FileHelper fileHelper = new FileHelper();
-        TokenizeHelper tokenizeHelper = new TokenizeHelper();
-
-        File file_1 = new File("input_1.txt");
-        File file_2 = new File("input_2.txt");
-
-        // Check if files exist. Create and populate if not
-        if (!(file_1.exists() && file_2.exists())) {
-            fileHelper.createAndPopulateFiles();
-        }
-
-        var input_1 = fileHelper.getFileContent("input_1.txt");
-        var input_2 = fileHelper.getFileContent("input_2.txt");
-
-        var employees_1 = tokenizeHelper.stringListToEmployeeList(input_1);
-        var employees_2 = tokenizeHelper.stringListToEmployeeList(input_2);
-
-        return new ArrayList<>(List.of(employees_1, employees_2));
-    }
-
     private int countFrequencyByPosition(String position, List<Employee> employeeList1, List<Employee> employeeList2) {
         int frequency = 0;
 
@@ -213,4 +236,24 @@ public class CollectionsHelper {
         }
     }
 
+    private List<List<Employee>> handleFileOperations() {
+        FileHelper fileHelper = new FileHelper();
+        TokenizeHelper tokenizeHelper = new TokenizeHelper();
+
+        File file_1 = new File("input_1.txt");
+        File file_2 = new File("input_2.txt");
+
+        // Check if files exist. Create and populate if not
+        if (!(file_1.exists() && file_2.exists())) {
+            fileHelper.createAndPopulateFiles();
+        }
+
+        var input_1 = fileHelper.getFileContent("input_1.txt");
+        var input_2 = fileHelper.getFileContent("input_2.txt");
+
+        var employees_1 = tokenizeHelper.stringListToEmployeeList(input_1);
+        var employees_2 = tokenizeHelper.stringListToEmployeeList(input_2);
+
+        return new ArrayList<>(List.of(employees_1, employees_2));
+    }
 }

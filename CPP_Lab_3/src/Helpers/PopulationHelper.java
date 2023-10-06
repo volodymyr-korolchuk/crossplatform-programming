@@ -2,11 +2,7 @@ package Helpers;
 
 import Entities.Employee;
 
-import javax.swing.text.DateFormatter;
-import java.text.DateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -41,7 +37,7 @@ public class PopulationHelper {
         );
     }
 
-    public void populate(List<Employee> employeeList, int number) {
+    public void populateWithRandomEmployees(List<Employee> employeeList, int number) {
         for (int i = 0; i < number; i++) {
             employeeList.add(generateRandomEmployee());
         }
