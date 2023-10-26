@@ -11,18 +11,18 @@ public class PopulationHelper {
     public void populateParticipantList(List<Participant> participants, List<List<String>> stringList) {
         for (var ptp : stringList) {
             Day[] schedule = new Day[7];
-            for (int i = 2, j = 0; i < ptp.size() - 2; i += 2, j++) {
+            for (int i = 2, j = 0; i < ptp.size() - 4; i += 4, j++) {
                 schedule[j] = new Day();
 
                 schedule[j].setSegment(
                     new LocalTime[] {
                         LocalTime.of(
                             Integer.parseInt(ptp.get(i)),
-                            0
+                            Integer.parseInt(ptp.get(i + 1))
                         ),
                         LocalTime.of(
-                            Integer.parseInt(ptp.get(i + 1)),
-                            0
+                            Integer.parseInt(ptp.get(i + 2)),
+                            Integer.parseInt(ptp.get(i + 3))
                         )
                     }
                 );
