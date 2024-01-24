@@ -1,0 +1,25 @@
+Margherita 780 160 TomatoSauce Mozzarella Basil
+Pepperoni 820 170 TomatoSauce Mozzarella Pepperoni
+Caprese 850 180 TomatoSauce Mozzarella Tomatoes FreshMozzarella Basil
+QuattroFormaggi 890 190 TomatoSauce Gorgonzola Mozzarella Parmesan Ricotta
+Hawaiian 810 165 TomatoSauce Mozzarella Ham Pineapple
+Vegetariana 830 175 TomatoSauce Mozzarella Mushrooms BellPeppers RedOnions Olives
+Diavola 870 200 TomatoSauce Mozzarella SpicySalami RedChiliFlakes
+ProsciuttoeFunghi 840 185 TomatoSauce Mozzarella Prosciutto Ham Mushrooms
+MargheritaExtra 800 155 TomatoSauce BuffaloMozzarella Basil
+QuattroStagioni 900 210 TomatoSauce Mozzarella Ham Artichokes Mushrooms Olives
+Napoletana 880 195 TomatoSauce Mozzarella Anchovies Capers BlackOlives Oregano
+MushroomTruffle 920 200 WhiteSauce Mozzarella Mushrooms TruffleOil
+Calzone 950 205 TomatoSauce Mozzarella Ham Ricotta Mushrooms
+WhitePizza 860 175 Ricotta Mozzarella Garlic Spinach
+BBQChicken 890 190 BBQSauce Mozzarella GrilledChicken RedOnions Cilantro
+PestoChicken 910 195 PestoSauce Mozzarella GrilledChicken SunDriedTomatoes Arugula
+MargheritaPizzaiolo 930 200 TomatoSauce Mozzarella FreshMozzarella CherryTomatoes Basil
+MeatLovers 940 210 TomatoSauce Mozzarella Pepperoni Sausage Bacon Ham
+TruffleMushroomBurrata 950 205 WhiteSauce Mozzarella TruffleOil Mushrooms BurrataCheese
+GreekPizza 960 210 OliveOil Mozzarella FetaCheese KalamataOlives Tomatoes RedOnions
+Capricciosa 870 185 TomatoSauce Mozzarella Artichokes Ham Mushrooms Olives
+ChickenAlfredo 890 190 AlfredoSauce Mozzarella GrilledChicken Broccoli Parmesan
+BuffaloChicken 880 195 BuffaloSauce Mozzarella GrilledChicken RedOnions BlueCheese
+Primavera 900 200 TomatoSauce Mozzarella MixedVegetables
+SpinachandFeta 850 180 TomatoSauce Mozzarella Spinach FetaCheese Garlic
